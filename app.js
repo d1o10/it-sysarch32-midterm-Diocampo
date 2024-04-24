@@ -13,7 +13,7 @@ mongoose.connect("mongodb+srv://jvgwapo:123456123456@cluster0.mc1616x.mongodb.ne
 mongoose.Promise = global.Promise;
 
 app.use(morgan("dev"));
-app.use('/products/uploads', express.static('uploads'));
+app.use( express.static('uploads'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
